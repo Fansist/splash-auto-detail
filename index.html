@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splash Auto Detail | Car Wash &amp; Auto Detailing in Eastlake, Chula Vista, San Diego</title>
+<meta name="description" content="Splash Auto Detail is a dedicated car wash and detailing shop in Eastlake, Chula Vista (San Diego South Bay). Interior and exterior detailing, wash and wax, and nano ceramic coating for every vehicle. Call (619) 993-8536.">
+<meta name="theme-color" content="#052e3d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23073b4f'/%3E%3Cpath d='M20 55 Q35 35 50 55 Q65 75 80 55' stroke='%2325CFE0' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Palette: deep marine + electric aqua + warm sun accent (water-splash / clean shine vibe) */
+    --ocean-950: #03141c;
+    --ocean-900: #052532;
+    --ocean-850: #063348;
+    --ocean-800: #073b4f;
+    --ocean-700: #0a4f68;
+    --ocean-600: #0d6685;
+    --ocean-500: #1382a8;
+    --aqua-500: #17b6d6;
+    --aqua-400: #25cfe0;
+    --aqua-300: #64e2ec;
+    --aqua-200: #a9ecf9;
+    --aqua-100: #d8f8fc;
+    --foam-100: #f2fcfd;
+    --sun-400: #ffc857;
+    --sun-500: #ffb238;
+    --white: #ffffff;
+    --ink: #052530;
+    --muted: #43626d;
+    --muted-on-dark: #bfe9f2;
+
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --space-3xs: 0.375rem;
+    --space-xs: 0.625rem;
+    --space-sm: 1.125rem;
+    --space-md: 1.85rem;
+    --space-lg: 3.25rem;
+    --space-xl: 5.5rem;
+    --space-2xl: 8.5rem;
+
+    --radius-sm: 12px;
+    --radius: 20px;
+    --radius-lg: 28px;
+    --shadow-soft: 0 20px 50px -28px rgba(3, 20, 28, 0.5);
+    --shadow-hard: 0 34px 74px -22px rgba(3, 20, 28, 0.6);
+    --shadow-lift: 0 10px 24px -10px rgba(3, 20, 28, 0.35);
+    --focus-ring: 3px solid var(--sun-400);
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--foam-100);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  img, svg { max-width: 100%; display: block; }
+
+  a { color: inherit; }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    color: var(--ocean-900);
+    line-height: 1.12;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  p { margin: 0; }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -60px;
+    left: 1rem;
+    background: var(--ocean-950);
+    color: var(--white);
+    padding: 0.85rem 1.35rem;
+    border-radius: 8px;
+    z-index: 300;
+    transition: top 0.2s var(--ease-out);
+    font-weight: 700;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  :focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-sm);
+  }
+
+  @media (min-width: 640px) {
+    .container { padding-inline: var(--space-lg); }
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5, 37, 50, 0.88);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid rgba(169, 236, 249, 0.14);
+  }
+
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.8rem;
+    gap: var(--space-sm);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+    color: var(--white);
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav a {
+    color: var(--aqua-200);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    padding: 0.4rem 0.1rem;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  .main-nav a:hover { color: var(--white); }
+
+  .main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 100%;
+    bottom: -2px;
+    height: 2px;
+    background: var(--aqua-300);
+    transition: right 0.28s var(--ease-out);
+  }
+
+  .main-nav a:hover::after,
+  .main-nav a:focus-visible::after {
+    right: 0;
+  }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--aqua-400), var(--ocean-500));
+    color: var(--ocean-950);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.15rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 22px -10px rgba(37, 207, 224, 0.75);
+    transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), filter 0.22s ease;
+    white-space: nowrap;
+  }
+  .header-cta:hover, .header-cta:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -10px rgba(37, 207, 224, 0.9);
+    filter: brightness(1.04);
+  }
+  .header-cta:active {
+    transform: translateY(0);
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid rgba(169, 236, 249, 0.4);
+    border-radius: 8px;
+    color: var(--white);
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .nav-toggle:hover { background: rgba(255,255,255,0.08); }
+
+  @media (max-width: 780px) {
+    .main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--ocean-900);
+      border-bottom: 1px solid rgba(169, 236, 249, 0.15);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s var(--ease-out);
+    }
+    .main-nav.open { max-height: 320px; }
+    .main-nav ul {
+      flex-direction: column;
+      gap: 0;
+      padding: var(--space-sm) var(--space-lg);
+    }
+    .main-nav li { border-bottom: 1px solid rgba(169, 236, 249, 0.08); }
+    .main-nav a { display: block; padding: 0.9rem 0.1rem; }
+    .nav-toggle { display: inline-flex; }
+    .header-cta.desktop-only { display: none; }
+  }
+
+  @media (min-width: 781px) {
+    .nav-toggle { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--ocean-950);
+    color: var(--white);
+    padding-block: calc(var(--space-2xl) - 1rem) var(--space-2xl);
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+  .hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 15% 0%, rgba(3, 20, 28, 0.65), transparent 55%),
+      linear-gradient(115deg, rgba(3, 20, 28, 0.96) 6%, rgba(5, 37, 50, 0.93) 40%, rgba(7, 59, 79, 0.72) 75%, rgba(7, 59, 79, 0.55) 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ocean-950);
+    background: var(--aqua-300);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    margin-bottom: var(--space-md);
+    animation: fadeUp 0.7s var(--ease-out) both;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 4.5vw + 1rem, 4.4rem);
+    color: var(--white);
+    font-weight: 700;
+    text-wrap: balance;
+    animation: fadeUp 0.7s var(--ease-out) 0.1s both;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.25);
+  }
+
+  .hero .tagline {
+    margin-top: var(--space-md);
+    font-size: clamp(1.05rem, 0.4vw + 1rem, 1.35rem);
+    color: var(--aqua-100);
+    max-width: 54ch;
+    animation: fadeUp 0.7s var(--ease-out) 0.2s both;
+  }
+
+  .hero-actions {
+    margin-top: var(--space-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    animation: fadeUp 0.7s var(--ease-out) 0.3s both;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1rem 1.7rem;
+    border-radius: 999px;
+    transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), filter 0.22s ease;
+    border: 1px solid transparent;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--aqua-300), var(--aqua-400) 55%, var(--ocean-500));
+    color: var(--ocean-950);
+    box-shadow: 0 16px 34px -14px rgba(100, 226, 236, 0.75);
+  }
+  .btn-primary:hover, .btn-primary:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -14px rgba(100, 226, 236, 0.95);
+    filter: brightness(1.03);
+  }
+  .btn-primary:active { transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.07);
+    color: var(--white);
+    border-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(6px);
+  }
+  .btn-secondary:hover, .btn-secondary:focus-visible {
+    background: rgba(255,255,255,0.16);
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.6);
+  }
+  .btn-secondary:active { transform: translateY(-1px); }
+
+  .hero-stats {
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    animation: fadeUp 0.7s var(--ease-out) 0.4s both;
+  }
+
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-stat .num {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1vw + 1.2rem, 2.1rem);
+    font-weight: 700;
+    color: var(--white);
+  }
+  .hero-stat .label {
+    font-size: 0.83rem;
+    color: var(--aqua-200);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: 0.2rem;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-waves {
+    position: absolute;
+    inset: auto 0 -2px 0;
+    line-height: 0;
+    z-index: 1;
+  }
+
+  /* ---------- Section shared ---------- */
+  section {
+    padding-block: var(--space-2xl);
+    position: relative;
+  }
+
+  .section-head {
+    max-width: 640px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-head .kicker {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--aqua-500);
+    margin-bottom: 0.7rem;
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.9rem, 1.1vw + 1.6rem, 2.7rem);
+    text-wrap: balance;
+  }
+
+  .section-head p {
+    margin-top: var(--space-sm);
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 56ch;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* ---------- About ---------- */
+  .about {
+    background: var(--white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (max-width: 860px) {
+    .about-grid { grid-template-columns: 1fr; }
+  }
+
+  .about-copy p {
+    font-size: 1.1rem;
+    color: var(--ocean-800);
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-copy p:last-child { margin-bottom: var(--space-sm); }
+
+  .about-copy h2 { margin-bottom: 1.35rem; }
+
+  .about-yelp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--ocean-700);
+    padding: 0.55rem 0.2rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, gap 0.2s ease;
+  }
+  .about-yelp-link:hover, .about-yelp-link:focus-visible {
+    color: var(--aqua-500);
+    gap: 0.7rem;
+  }
+
+  .about-art {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    box-shadow: var(--shadow-hard);
+    isolation: isolate;
+  }
+
+  .about-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease-out);
+  }
+  .about-art:hover img { transform: scale(1.035); }
+
+  .about-art-caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: var(--space-lg) var(--space-md) var(--space-md);
+    background: linear-gradient(to top, rgba(3,20,28,0.85), transparent);
+    color: var(--white);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-art:hover img { transform: none; }
+  }
+
+  /* ---------- Services ---------- */
+  .services {
+    background: linear-gradient(180deg, var(--foam-100), #dff5f8);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(10, 79, 104, 0.08);
+    transition: transform 0.28s var(--ease-out), box-shadow 0.28s var(--ease-out), border-color 0.28s ease;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .service-card:hover, .service-card:focus-within {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hard);
+    border-color: rgba(37, 207, 224, 0.35);
+  }
+
+  .service-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--aqua-300), var(--ocean-500));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-lift);
+  }
+
+  .service-icon svg { width: 27px; height: 27px; }
+
+  .service-card h3 {
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+  }
+
+  .service-card p {
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+
+  .service-card .price-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--ocean-700);
+    background: var(--aqua-100);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    margin-top: -0.3rem;
+  }
+
+  .service-card.featured {
+    background: linear-gradient(160deg, var(--ocean-900), var(--ocean-800) 70%);
+    border-color: rgba(100, 226, 236, 0.3);
+  }
+  .service-card.featured h3,
+  .service-card.featured p { color: var(--white); }
+  .service-card.featured p { color: var(--aqua-100); }
+  .service-card.featured .service-icon {
+    background: linear-gradient(135deg, var(--sun-400), var(--sun-500));
+  }
+  .service-card.featured:hover, .service-card.featured:focus-within {
+    border-color: rgba(255, 200, 87, 0.5);
+  }
+
+  /* ---------- Highlights strip ---------- */
+  .highlights {
+    background: linear-gradient(125deg, var(--ocean-950), var(--ocean-800) 65%, var(--ocean-700));
+    color: var(--white);
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .highlight-item {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-start;
+  }
+
+  .highlight-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(169, 236, 249, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, transform 0.25s var(--ease-out);
+  }
+  .highlight-item:hover .highlight-icon {
+    background: rgba(100, 226, 236, 0.18);
+    transform: scale(1.06);
+  }
+  .highlight-icon svg { width: 22px; height: 22px; }
+
+  .highlight-item h3 {
+    color: var(--white);
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .highlight-item p {
+    color: var(--muted-on-dark);
+    font-size: 0.97rem;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery {
+    background: var(--white);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 4 / 3;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s var(--ease-out);
+  }
+
+  .gallery-item:hover img, .gallery-item:focus-within img {
+    transform: scale(1.06);
+  }
+
+  .gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-item:hover img, .gallery-item:focus-within img { transform: none; }
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    background: linear-gradient(180deg, #dff5f8, var(--foam-100));
+  }
+
+  .faq-list {
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .faq-item {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(10, 79, 104, 0.1);
+    box-shadow: var(--shadow-lift);
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.25rem var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ocean-900);
+    transition: background 0.2s ease;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { background: var(--foam-100); }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--aqua-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s var(--ease-out), background 0.3s ease;
+  }
+  .faq-icon svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s var(--ease-out);
+  }
+  .faq-item[open] .faq-icon {
+    background: var(--aqua-400);
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-md) 1.35rem;
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 68ch;
+  }
+
+  /* ---------- Visit ---------- */
+  .visit {
+    background: var(--white);
+  }
+
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (max-width: 860px) {
+    .visit-grid { grid-template-columns: 1fr; }
+  }
+
+  .visit-card {
+    background: var(--foam-100);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    border: 1px solid rgba(10, 79, 104, 0.08);
+  }
+
+  .visit-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .info-row {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+  }
+  .info-row:last-child { margin-bottom: 0; }
+
+  .info-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: linear-gradient(135deg, var(--aqua-300), var(--ocean-500));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lift);
+  }
+  .info-icon svg { width: 20px; height: 20px; }
+
+  .info-row a {
+    text-decoration: none;
+    color: var(--ocean-700);
+    font-weight: 700;
+    border-radius: 4px;
+  }
+  .info-row a:hover, .info-row a:focus-visible { text-decoration: underline; }
+
+  .info-row .label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-sm);
+  }
+  .hours-table th {
+    text-align: left;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(10, 79, 104, 0.15);
+  }
+  .hours-table td {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(10, 79, 104, 0.08);
+    font-size: 0.96rem;
+    color: var(--ocean-800);
+  }
+  .hours-table tr:last-child td { border-bottom: none; }
+
+  .map-frame {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(155deg, var(--ocean-800), var(--ocean-950));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .map-frame .map-inner {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    padding: var(--space-lg);
+  }
+
+  .map-frame svg.bg-pattern {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.55;
+  }
+
+  .map-cta {
+    margin-top: var(--space-md);
+  }
+
+  /* ---------- Final CTA ---------- */
+  .cta-banner {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(100, 226, 236, 0.32), transparent 60%),
+      linear-gradient(135deg, var(--ocean-950), var(--ocean-800));
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta-banner h2 {
+    color: var(--white);
+    font-size: clamp(1.9rem, 1.4vw + 1.5rem, 2.7rem);
+  }
+
+  .cta-banner p {
+    margin-top: var(--space-sm);
+    color: var(--aqua-100);
+    font-size: 1.12rem;
+    max-width: 56ch;
+    margin-inline: auto;
+  }
+
+  .cta-banner .hero-actions {
+    justify-content: center;
+    margin-top: var(--space-lg);
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer {
+    background: var(--ocean-950);
+    color: var(--aqua-200);
+    padding-block: var(--space-lg);
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 1.08rem;
+  }
+  .footer-brand svg { width: 28px; height: 28px; }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: var(--space-md);
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  .footer-links a:hover, .footer-links a:focus-visible { text-decoration: underline; color: var(--white); }
+
+  .footer-note {
+    font-size: 0.83rem;
+    color: rgba(169, 236, 249, 0.6);
+    margin-top: var(--space-md);
+    text-align: center;
+  }
+
+  /* decorative wave divider */
+  .wave-divider {
+    line-height: 0;
+    transform: translateY(1px);
+  }
+</style>
+      <!-- SEO:START (generated by _seo_inject.js) -->
+    <link rel="canonical" href="https://fansist.github.io/splash-auto-detail/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Splash Auto Detail" />
+    <meta property="og:title" content="Splash Auto Detail: Car Wash &amp; Detailing in Eastlake" />
+    <meta property="og:description" content="Full interior and exterior detailing, wash and wax, and car washes from $29 in Eastlake, Chula Vista." />
+    <meta property="og:url" content="https://fansist.github.io/splash-auto-detail/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://fansist.github.io/splash-auto-detail/photos/photo1.jpg" />
+    <meta property="og:image:alt" content="A freshly detailed red Lamborghini Urus parked in the shop's lot, with the Splash Auto Detail blue sign, shade canopy, and hills visible in the background." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Splash Auto Detail: Car Wash &amp; Detailing in Eastlake" />
+    <meta name="twitter:description" content="Full interior and exterior detailing, wash and wax, and car washes from $29 in Eastlake, Chula Vista." />
+    <meta name="twitter:image" content="https://fansist.github.io/splash-auto-detail/photos/photo1.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoWash","name":"Splash Auto Detail","url":"https://fansist.github.io/splash-auto-detail/","image":["https://fansist.github.io/splash-auto-detail/photos/photo1.jpg"],"telephone":"(619) 993-8536","address":{"@type":"PostalAddress","streetAddress":"851 District Pl","addressLocality":"Chula Vista","addressRegion":"CA","postalCode":"91914","addressCountry":"US"},"description":"Fixed-location detail shop in Chula Vista's Eastlake district, open since 2011. Provides expert car wash and detailing for every kind of vehicle, from daily commuters to luxury automobiles - interior and exterior detail packages at a dedicated facility. Open Mon-Fri 8:15-5, Sat 8:15-2. Fifteen ye...","areaServed":{"@type":"City","name":"San Diego"}}</script>
+    <!-- SEO:END -->
+  </head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top" aria-label="Splash Auto Detail home">
+      <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#073b4f"/>
+        <path d="M10 27c4-8 8-8 12 0s8 8 12 0" stroke="#64e2ec" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <path d="M10 33c4-8 8-8 12 0s8 8 12 0" stroke="#25cfe0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.8"/>
+      </svg>
+      Splash Auto Detail
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" id="navToggle" aria-label="Toggle navigation menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#highlights">Why Splash</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta desktop-only" href="tel:+16199938536" aria-label="Call Splash Auto Detail at (619) 993-8536">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (619) 993-8536
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero-media" aria-hidden="true">
+      <img src="photos/photo1.jpg" alt="" loading="eager" fetchpriority="high">
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow">Eastlake &middot; Chula Vista &middot; South Bay San Diego</span>
+      <h1>Splash Auto Detail</h1>
+      <p class="tagline">Expert car wash and detailing for every kind of vehicle, from daily commuters to luxury automobiles, at our dedicated Eastlake facility.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+16199938536" aria-label="Call Splash Auto Detail at (619) 993-8536">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (619) 993-8536
+        </a>
+        <a class="btn btn-secondary" href="#services">
+          View Services
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num">66</span>
+          <span class="label">5-star Yelp reviews</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">Mon, Sat</span>
+          <span class="label">Open 6 days a week</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">$29+</span>
+          <span class="label">Car wash starting price</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-waves" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="width:100%;height:80px;display:block;">
+        <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,32 1440,64 L1440,120 L0,120 Z" fill="#f2fcfd"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-copy reveal">
+        <span class="kicker" style="display:block;">About Us</span>
+        <h2>A dedicated detail shop, built for the South Bay</h2>
+        <p>Splash Auto Detail is a fixed-location detail shop in Chula Vista's Eastlake district, serving the South Bay since 2011. We provide expert car wash and detailing for every kind of vehicle, from daily commuters to luxury automobiles, with interior and exterior detail packages at our dedicated facility.</p>
+        <p>Fifteen years in, our shop has built a loyal local customer base serving sedans, trucks, SUVs, luxury cars, and EVs alike, all backed by a 5.0-star reputation across 66 Yelp reviews.</p>
+        <a class="about-yelp-link" href="https://www.yelp.com/biz/splash-auto-detail-chula-vista-5" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+          Read our reviews on Yelp
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+      <div class="about-art reveal">
+        <img src="photos/photo2.jpg" alt="A freshly detailed white Porsche Taycan EV and a tan Range Rover parked side by side at Splash Auto Detail's Eastlake facility." decoding="async">
+        <div class="about-art-caption">Recently detailed: Porsche Taycan &amp; Range Rover, Eastlake facility</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Services</span>
+        <h2>Detailing packages for every vehicle</h2>
+        <p>From a quick wash to a full ceramic coating, our menu covers sedans, trucks, SUVs, luxury cars, and EVs.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M5 12l2-6h10l2 6M5 12v6a1 1 0 001 1h1a1 1 0 001-1v-1h8v1a1 1 0 001 1h1a1 1 0 001-1v-6"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg>
+          </div>
+          <h3>Car Wash</h3>
+          <span class="price-badge">From $29</span>
+          <p>A thorough exterior wash to keep your daily driver looking sharp.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H4z"/><path d="M4 16l4 4h8l4-4"/><path d="M9 9h6M9 12h4"/></svg>
+          </div>
+          <h3>Full Interior Detailing</h3>
+          <p>Deep cleaning of seats, carpets, dash, and every interior surface.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4.5 4 1.5 6-5-3.2L7 19l1.5-6L4 9l5.5-.5z"/></svg>
+          </div>
+          <h3>Exterior Detailing</h3>
+          <p>Restoring shine and clarity to your vehicle's paint and trim.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c2-4 6-6 8-6s6 2 8 6c-2 4-6 6-8 6s-6-2-8-6z"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Wash &amp; Wax</h3>
+          <p>A protective wax finish paired with a complete wash for lasting shine.</p>
+        </div>
+        <div class="service-card featured reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg>
+          </div>
+          <h3>Nano Ceramic Coating</h3>
+          <p>Long-lasting protection that keeps your paint glossy and shielded for months, not weeks.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17V9l3-4h6l3 4v8M9 17v-4h6v4"/></svg>
+          </div>
+          <h3>All Vehicle Types</h3>
+          <p>Sedans, trucks, SUVs, luxury cars, and EVs, we detail them all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights" id="highlights">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker" style="color:var(--aqua-300);">Why Splash</span>
+        <h2 style="color:#ffffff;">Trusted by the South Bay</h2>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-item reveal">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a9ecf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+          </div>
+          <div>
+            <h3>66 five-star reviews</h3>
+            <p>A 5.0-star reputation on Yelp built through consistent, careful work.</p>
+          </div>
+        </div>
+        <div class="highlight-item reveal">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a9ecf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+          </div>
+          <div>
+            <h3>Eastlake, Chula Vista</h3>
+            <p>A dedicated facility at 851 District Pl, serving the greater San Diego South Bay.</p>
+          </div>
+        </div>
+        <div class="highlight-item reveal">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a9ecf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c2-6 6-9 8-9s6 3 8 9"/><circle cx="12" cy="6" r="3"/></svg>
+          </div>
+          <div>
+            <h3>Loyal local customer base</h3>
+            <p>A South Bay shop with a devoted following, from daily commuters to luxury and EV owners.</p>
+          </div>
+        </div>
+        <div class="highlight-item reveal">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a9ecf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <div>
+            <h3>Convenient hours</h3>
+            <p>Open Monday, Friday 8:15am, 5pm and Saturday 8:15am, 2pm.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Recent Work</span>
+        <h2>Fresh off the lot</h2>
+        <p>A look at some of the vehicles we've recently washed and detailed at our Eastlake facility.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="photos/photo1.jpg" alt="A freshly detailed red Lamborghini Urus parked in the Splash Auto Detail lot in Eastlake, Chula Vista, with the shop's sign and shade canopy behind it." decoding="async">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="photos/photo2.jpg" alt="A freshly detailed white Porsche Taycan EV and a tan Range Rover parked side by side at Splash Auto Detail." decoding="async">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="photos/photo3.jpg" alt="A freshly detailed matte-black Range Rover parked at Splash Auto Detail's Eastlake facility." decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">FAQ</span>
+        <h2>Good to know before you visit</h2>
+        <p>A few common questions from South Bay drivers booking a wash or detail.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>
+            Do I need an appointment, or can I walk in?
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#073b4f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <p class="faq-answer">Give us a call at (619) 993-8536 before you head over, we can confirm current availability and let you know the best time to bring your vehicle in during our posted hours.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            Do you detail EVs and luxury vehicles?
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#073b4f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <p class="faq-answer">Yes. We regularly detail sedans, trucks, SUVs, EVs, and luxury vehicles, our services are built to handle every kind of vehicle that comes through the lot.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            What's the difference between a wash and a full detail?
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#073b4f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <p class="faq-answer">A car wash covers a thorough exterior clean starting at $29. A full detail goes deeper, interior and exterior packages, wash and wax, or nano ceramic coating for longer-lasting protection. Call us and we'll help you pick the right package for your vehicle.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            What are your hours?
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#073b4f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <p class="faq-answer">We're open Monday through Friday from 8:15am to 5:00pm, and Saturday from 8:15am to 2:00pm. We're closed on Sunday.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            Where are you located?
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#073b4f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <p class="faq-answer">Our dedicated facility is at 851 District Pl in the Eastlake neighborhood of Chula Vista, convenient to the greater San Diego South Bay.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Visit</span>
+        <h2>Find us in Eastlake</h2>
+        <p>Stop by the shop or give us a call to schedule your detail.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card reveal">
+          <h3>Contact &amp; Hours</h3>
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="label">Address</div>
+              <p>851 District Pl, Chula Vista, CA 91914</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="label">Phone</div>
+              <a href="tel:+16199938536">(619) 993-8536</a>
+            </div>
+          </div>
+          <div class="info-row" style="align-items:flex-start;">
+            <div class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#052530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div style="width:100%;">
+              <div class="label">Hours</div>
+              <table class="hours-table">
+                <thead>
+                  <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Monday, Friday</td><td>8:15am, 5:00pm</td></tr>
+                  <tr><td>Saturday</td><td>8:15am, 2:00pm</td></tr>
+                  <tr><td>Sunday</td><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="map-frame reveal">
+          <svg class="bg-pattern" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M40 0H0V40" fill="none" stroke="#64e2ec" stroke-width="1" opacity="0.3"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="400" fill="url(#grid)"/>
+            <path d="M0 300 Q100 260 200 300 T400 300" stroke="#25cfe0" stroke-width="3" fill="none" opacity="0.5"/>
+            <path d="M0 340 Q100 310 200 340 T400 340" stroke="#64e2ec" stroke-width="2" fill="none" opacity="0.4"/>
+          </svg>
+          <div class="map-inner">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#64e2ec" stroke-width="1.6" style="margin-inline:auto;" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 style="color:#ffffff;margin-top:var(--space-sm);">Splash Auto Detail</h3>
+            <p style="color:var(--aqua-200);margin-top:0.4rem;">851 District Pl, Chula Vista, CA 91914</p>
+            <a class="btn btn-primary map-cta" href="https://www.google.com/maps/search/?api=1&query=Splash%20Auto%20Detail%20851%20District%20Pl%2C%20Chula%20Vista%2C%20CA%2091914" target="_blank" rel="noopener noreferrer">
+              Get Directions
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container reveal">
+      <h2>Ready for a fresh shine?</h2>
+      <p>Call ahead or stop by our Eastlake facility, we're ready for your commuter or your luxury ride.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+16199938536" aria-label="Call Splash Auto Detail at (619) 993-8536">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (619) 993-8536
+        </a>
+        <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Splash%20Auto%20Detail%20851%20District%20Pl%2C%20Chula%20Vista%2C%20CA%2091914" target="_blank" rel="noopener noreferrer">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="#073b4f"/>
+          <path d="M10 27c4-8 8-8 12 0s8 8 12 0" stroke="#64e2ec" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+          <path d="M10 33c4-8 8-8 12 0s8 8 12 0" stroke="#25cfe0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.8"/>
+        </svg>
+        Splash Auto Detail
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#highlights">Why Splash</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a href="tel:+16199938536">(619) 993-8536</a></li>
+          <li><a href="https://www.yelp.com/biz/splash-auto-detail-chula-vista-5" target="_blank" rel="noopener noreferrer">Yelp</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-note">&copy; <span id="year"></span> Splash Auto Detail &middot; 851 District Pl, Chula Vista, CA 91914 &middot; Eastlake, San Diego metro</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    "use strict";
+
+    var yearEl = document.getElementById("year");
+    if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+    var toggle = document.getElementById("navToggle");
+    var nav = document.getElementById("primary-nav");
+    if (toggle && nav) {
+      toggle.addEventListener("click", function () {
+        var isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var revealEls = document.querySelectorAll(".reveal");
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    } else {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    }
+  })();
+</script>
+</body>
+</html>

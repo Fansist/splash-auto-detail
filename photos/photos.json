@@ -1,0 +1,17 @@
+[
+  {
+    "file": "photo1.jpg",
+    "source_page": "https://maps.roadtrippers.com/us/chula-vista-ca/services/splash-auto-detail (mirroring Yelp photo https://s3-media0.fl.yelpcdn.com/bphoto/Xg0Kjfg1xHA1gP1gpUaouQ/o.jpg)",
+    "shows": "A freshly detailed red Lamborghini Urus parked in the shop's lot, with the Splash Auto Detail blue sign, shade canopy, and hills visible in the background."
+  },
+  {
+    "file": "photo2.jpg",
+    "source_page": "https://maps.roadtrippers.com/us/chula-vista-ca/services/splash-auto-detail (mirroring Yelp photo https://s3-media0.fl.yelpcdn.com/bphoto/RuIr1ZmWp8ubOm3C7SEf5w/o.jpg, captioned 'Picked up a new EV? We'll make sure it will turn heads...')",
+    "shows": "A detailed white Porsche Taycan EV and a tan Range Rover parked side by side in the shop's lot, with the shop's blue sign and shade canopy behind them."
+  },
+  {
+    "file": "photo3.jpg",
+    "source_page": "https://maps.roadtrippers.com/us/chula-vista-ca/services/splash-auto-detail (mirroring Yelp photo https://s3-media0.fl.yelpcdn.com/bphoto/ctner-dDXTdiH4A-9ZghdQ/o.jpg, used as the page's og:image for Splash Auto Detail)",
+    "shows": "A freshly detailed matte-black Range Rover parked at the shop, showing the lot and surrounding greenery."
+  }
+]
